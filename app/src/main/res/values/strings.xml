@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">QRScan</string>
+    <!-- Strings related to login -->
+    <string name="phone_number">PhoneNumber</string>
+    <string name="otp">OTP</string>
+    <string name="btncontinue">Continue</string>
+    <string name="uname">UserName</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

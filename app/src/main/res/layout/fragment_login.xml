@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/fragment_vertical_margin"
+    android:paddingLeft="@dimen/fragment_horizontal_margin"
+    android:paddingRight="@dimen/fragment_horizontal_margin"
+    android:paddingTop="@dimen/fragment_vertical_margin"
+    tools:context=".LoginFragment">
+
+    <EditText
+        android:id="@+id/edtTxtPhnNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/phone_number"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtTxtotp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/otp"
+        android:inputType="number"
+        android:maxLength="6"
+        android:maxLines="1"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/edtTxtPhnNumber"
+        app:layout_constraintStart_toStartOf="@id/edtTxtPhnNumber"
+        app:layout_constraintTop_toTopOf="@id/edtTxtPhnNumber"
+        app:layout_constraintBottom_toBottomOf="@id/edtTxtPhnNumber"/>
+
+    <EditText
+        android:id="@+id/edtTxtuname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/uname"
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/edtTxtPhnNumber"
+        app:layout_constraintStart_toStartOf="@id/edtTxtPhnNumber"
+        app:layout_constraintTop_toTopOf="@id/edtTxtPhnNumber"
+        app:layout_constraintBottom_toBottomOf="@id/edtTxtPhnNumber"/>
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="64dp"
+        android:text="@string/btncontinue"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtPhnNumber" />
+
+    <ProgressBar
+        android:id="@+id/btnProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/btnContinue"
+        app:layout_constraintEnd_toEndOf="@+id/btnContinue"
+        app:layout_constraintStart_toStartOf="@+id/btnContinue"
+        app:layout_constraintTop_toTopOf="@id/btnContinue" />
+</androidx.constraintlayout.widget.ConstraintLayout>
