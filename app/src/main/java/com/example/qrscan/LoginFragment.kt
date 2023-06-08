@@ -53,10 +53,14 @@ class LoginFragment : Fragment() {
                 binding.edtTxtPhnNumber.visibility = View.INVISIBLE
                 binding.edtTxtotp.visibility = View.VISIBLE
                 state=1
+                binding.btnProgressBar.visibility = View.GONE
+                binding.btnContinue.visibility = View.VISIBLE
             }
         }
 
         binding.btnContinue.setOnClickListener {
+            binding.btnProgressBar.visibility = View.VISIBLE
+            binding.btnContinue.visibility = View.INVISIBLE
             if(state==0) {
                 var phoneNumber = binding.edtTxtPhnNumber.text.toString()
                 phoneNumber = "+91$phoneNumber"
@@ -80,7 +84,8 @@ class LoginFragment : Fragment() {
                 firestore.collection("users").document(user?.uid.toString()).set(data).addOnCompleteListener {addUser->
                     if(addUser.isSuccessful){
                         val mainAct = requireActivity() as MainActivity
-                        mainAct.switchToQRFragment()
+                        Constants.userName = uname
+                        mainAct.switchToQRScansFragment()
                     }
                     else{
                         Toast.makeText(requireContext(), "Failed to set name", Toast.LENGTH_SHORT).show()
@@ -100,6 +105,8 @@ class LoginFragment : Fragment() {
                     binding.edtTxtotp.visibility = View.GONE
                     binding.edtTxtuname.visibility = View.VISIBLE
                     state=2
+                    binding.btnProgressBar.visibility = View.GONE
+                    binding.btnContinue.visibility = View.VISIBLE
                 } else {
                     if (task.exception is FirebaseAuthInvalidCredentialsException) {
                     }

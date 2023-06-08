@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardViewQrScanSingleRow"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:padding="8dp"
+    app:cardCornerRadius="16dp">
+
+    <TextView
+        android:id="@+id/txtDataQrScanSingleRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="32dp"
+        android:text="Test Text"
+        android:textSize="20sp"
+        android:textColor="?attr/textColor"/>
+
+    <ImageView
+        android:id="@+id/imgCopyQrScanSingleRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="4dp"
+        android:src="@drawable/baseline_copy_all_24"/>
+
+</androidx.cardview.widget.CardView>

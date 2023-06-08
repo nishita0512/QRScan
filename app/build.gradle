@@ -53,4 +53,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'com.google.firebase:firebase-firestore-ktx:24.6.1'
+
+    implementation 'com.github.yuriy-budiyev:code-scanner:2.3.2'
+
 }
